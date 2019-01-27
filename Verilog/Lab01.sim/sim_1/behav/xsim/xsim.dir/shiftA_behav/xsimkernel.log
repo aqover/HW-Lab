@@ -1,0 +1,7 @@
+Running: xsim.dir/shiftA_behav/xsimk.exe -simmode gui -wdb shiftA_behav.wdb -simrunnum 0 -socket 59042
+Design successfully loaded
+Design Loading Memory Usage: 5368 KB (Peak: 5368 KB)
+Design Loading CPU Usage: 46 ms
+Simulation completed
+Simulation Memory Usage: 5968 KB (Peak: 5968 KB)
+Simulation CPU Usage: 46 ms

@@ -1,0 +1,29 @@
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+time                    0: Input {0}, S1 {x}, S2{x}
+time                 8000: Input {3}, S1 {x}, S2{x}
+time                10000: Input {3}, S1 {3}, S2{X}
+time                16000: Input {0}, S1 {3}, S2{X}
+time                24000: Input {3}, S1 {3}, S2{X}
+time                30000: Input {3}, S1 {3}, S2{3}
+time                32000: Input {0}, S1 {3}, S2{3}
+time                40000: Input {3}, S1 {3}, S2{3}
+time                48000: Input {0}, S1 {3}, S2{3}
+time                50000: Input {2}, S1 {0}, S2{2}
+time                56000: Input {1}, S1 {0}, S2{2}
+time                64000: Input {2}, S1 {0}, S2{2}
+time                70000: Input {2}, S1 {0}, S2{0}
+time                72000: Input {1}, S1 {0}, S2{0}
+time                80000: Input {2}, S1 {0}, S2{0}
+time                88000: Input {1}, S1 {0}, S2{0}
+time                90000: Input {1}, S1 {3}, S2{1}
+time                96000: Input {2}, S1 {3}, S2{1}
+time               104000: Input {1}, S1 {3}, S2{1}
+time               110000: Input {1}, S1 {3}, S2{3}
+time               112000: Input {2}, S1 {3}, S2{3}
+time               120000: Input {1}, S1 {3}, S2{3}
+time               128000: Input {2}, S1 {3}, S2{3}
+time               130000: Input {2}, S1 {0}, S2{2}
+time               136000: Input {1}, S1 {0}, S2{2}
+time               144000: Input {2}, S1 {0}, S2{2}
+$finish called at time : 150 ns : File "D:/aqover-pc/Documents/Learning/HWLab/Lab01/Lab01.srcs/sim_1/new/testShifter.v" Line 44
