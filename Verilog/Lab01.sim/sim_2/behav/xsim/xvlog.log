@@ -1,0 +1,5 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/aqover-pc/Documents/Learning/HW Lab I/Verilog/Lab01.srcs/sources_1/new/shifter.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module shiftA
+INFO: [VRFC 10-311] analyzing module shiftB
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/aqover-pc/Documents/Learning/HW Lab I/Verilog/Lab01.srcs/sim_1/new/testShifter.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module testShifter

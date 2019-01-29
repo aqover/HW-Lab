@@ -21,25 +21,28 @@
 
 
 module shiftA(q,clock,d);
-output [1:0] q;
-input clock, d;
-reg [1:0] q;
+parameter width=4;
+output reg [width-1:0] q;
+input clock,d;
+integer i;
 
 always @(posedge clock)
 begin
-    q[0]=d;
-    q[1]=q[0];
+//    q = {q[width-2:0], d};
+    q[0] = d;
+    for(i=1; i < width;i = i+1)
+        q[i] = q[i-1];
+    
 end
 endmodule
 
 module shiftB(q,clock,d);
-output [1:0] q;
+parameter width=4;
+output reg [width-1:0] q;
 input clock,d;
-reg [1:0] q;
 
 always @(posedge clock)
 begin
-    q[0]<=d;
-    q[1]<=q[0];
+    q <= {q[width-2:0], d};  
 end
 endmodule

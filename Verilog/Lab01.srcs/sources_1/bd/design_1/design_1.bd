@@ -1,0 +1,176 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0x0",
+      "device": "xc7a35ticpg236-1L",
+      "name": "design_1",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2018.3"
+    },
+    "design_tree": {
+      "flipflop_0": "",
+      "flipflop_1": "",
+      "flipflop_2": "",
+      "flipflop_3": "",
+      "flipflop_4": ""
+    },
+    "components": {
+      "flipflop_0": {
+        "vlnv": "xilinx.com:module_ref:flipflop:1.0",
+        "xci_name": "design_1_flipflop_0_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "flipflop",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clock": {
+            "type": "clk",
+            "direction": "I"
+          },
+          "q": {
+            "direction": "O"
+          },
+          "nreset": {
+            "direction": "I"
+          },
+          "d": {
+            "direction": "I"
+          }
+        }
+      },
+      "flipflop_1": {
+        "vlnv": "xilinx.com:module_ref:flipflop:1.0",
+        "xci_name": "design_1_flipflop_1_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "flipflop",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clock": {
+            "type": "clk",
+            "direction": "I"
+          },
+          "q": {
+            "direction": "O"
+          },
+          "nreset": {
+            "direction": "I"
+          },
+          "d": {
+            "direction": "I"
+          }
+        }
+      },
+      "flipflop_2": {
+        "vlnv": "xilinx.com:module_ref:flipflop:1.0",
+        "xci_name": "design_1_flipflop_0_1",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "flipflop",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clock": {
+            "type": "clk",
+            "direction": "I"
+          },
+          "q": {
+            "direction": "O"
+          },
+          "nreset": {
+            "direction": "I"
+          },
+          "d": {
+            "direction": "I"
+          }
+        }
+      },
+      "flipflop_3": {
+        "vlnv": "xilinx.com:module_ref:flipflop:1.0",
+        "xci_name": "design_1_flipflop_1_1",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "flipflop",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clock": {
+            "type": "clk",
+            "direction": "I"
+          },
+          "q": {
+            "direction": "O"
+          },
+          "nreset": {
+            "direction": "I"
+          },
+          "d": {
+            "direction": "I"
+          }
+        }
+      },
+      "flipflop_4": {
+        "vlnv": "xilinx.com:module_ref:flipflop:1.0",
+        "xci_name": "design_1_flipflop_4_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "flipflop",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clock": {
+            "type": "clk",
+            "direction": "I"
+          },
+          "q": {
+            "direction": "O"
+          },
+          "nreset": {
+            "direction": "I"
+          },
+          "d": {
+            "direction": "I"
+          }
+        }
+      }
+    },
+    "nets": {
+      "flipflop_0_q": {
+        "ports": [
+          "flipflop_0/q",
+          "flipflop_1/d"
+        ]
+      },
+      "flipflop_0_q1": {
+        "ports": [
+          "flipflop_2/q",
+          "flipflop_3/d"
+        ]
+      },
+      "Net": {
+        "ports": [
+          "flipflop_2/clock",
+          "flipflop_3/clock",
+          "flipflop_0/clock",
+          "flipflop_1/clock"
+        ]
+      },
+      "flipflop_1_q": {
+        "ports": [
+          "flipflop_1/q",
+          "flipflop_2/d"
+        ]
+      },
+      "Net1": {
+        "ports": [
+          "flipflop_0/nreset",
+          "flipflop_1/nreset",
+          "flipflop_2/nreset",
+          "flipflop_3/nreset"
+        ]
+      }
+    }
+  }
+}

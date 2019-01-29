@@ -2,10 +2,5 @@
 2018.3
 Dec  7 2018
 00:33:28
-D:/aqover-pc/Documents/Learning/HWLab/Lab01/Lab01.sim/sim_1/behav/xsim/glbl.v,1544155481,verilog,,,,glbl,,,,,,,,
-D:/aqover-pc/Documents/Learning/HWLab/Lab01/Lab01.srcs/sim_1/new/testDflipflop.v,1548616812,verilog,,,,testDflipflop,,,,,,,,
-D:/aqover-pc/Documents/Learning/HWLab/Lab01/Lab01.srcs/sim_1/new/testShifter.v,1548618855,verilog,,,,testShifter,,,,,,,,
-D:/aqover-pc/Documents/Learning/HWLab/Lab01/Lab01.srcs/sim_1/new/tester1.v,1548616204,verilog,,,,tester1,,,,,,,,
-D:/aqover-pc/Documents/Learning/HWLab/Lab01/Lab01.srcs/sources_1/new/FullAdder.v,1548616396,verilog,,D:/aqover-pc/Documents/Learning/HWLab/Lab01/Lab01.srcs/sim_1/new/tester1.v,,FullAdder,,,,,,,,
-D:/aqover-pc/Documents/Learning/HWLab/Lab01/Lab01.srcs/sources_1/new/flipflop.v,1548617282,verilog,,D:/aqover-pc/Documents/Learning/HWLab/Lab01/Lab01.srcs/sim_1/new/testDflipflop.v,,flipflop,,,,,,,,
-D:/aqover-pc/Documents/Learning/HWLab/Lab01/Lab01.srcs/sources_1/new/shifter.v,1548617604,verilog,,,,shiftA;shiftB,,,,,,,,
+D:/aqover-pc/Documents/Learning/HW Lab I/Verilog/Lab01.sim/sim_1/behav/xsim/glbl.v,1548787477,verilog,,,,glbl,,,,,,,,
+D:/aqover-pc/Documents/Learning/HW Lab I/Verilog/Lab01.srcs/sim_1/new/testShifter.v,1548790815,verilog,,,,testShifter,,,,,,,,

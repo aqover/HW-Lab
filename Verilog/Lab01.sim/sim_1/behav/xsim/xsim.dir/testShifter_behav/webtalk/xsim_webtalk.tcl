@@ -1,6 +1,6 @@
-webtalk_init -webtalk_dir D:/aqover-pc/Documents/Learning/HWLab/Lab01/Lab01.sim/sim_1/behav/xsim/xsim.dir/testShifter_behav/webtalk/
+webtalk_init -webtalk_dir D:/aqover-pc/Documents/Learning/HW Lab I/Verilog/Lab01.sim/sim_1/behav/xsim/xsim.dir/testShifter_behav/webtalk/
 webtalk_register_client -client project
-webtalk_add_data -client project -key date_generated -value "Mon Jan 28 03:02:46 2019" -context "software_version_and_target_device"
+webtalk_add_data -client project -key date_generated -value "Wed Jan 30 02:51:32 2019" -context "software_version_and_target_device"
 webtalk_add_data -client project -key product_version -value "XSIM v2018.3 (64-bit)" -context "software_version_and_target_device"
 webtalk_add_data -client project -key build_version -value "2405991" -context "software_version_and_target_device"
 webtalk_add_data -client project -key os_platform -value "WIN64" -context "software_version_and_target_device"
@@ -14,7 +14,7 @@ webtalk_add_data -client project -key target_package -value "not_applicable" -co
 webtalk_add_data -client project -key target_speed -value "not_applicable" -context "software_version_and_target_device"
 webtalk_add_data -client project -key random_id -value "fefa42dd-7c8c-4c33-b448-eb4cf4c36c50" -context "software_version_and_target_device"
 webtalk_add_data -client project -key project_id -value "38e4341b31ab4fbdb70bd9c6024e776b" -context "software_version_and_target_device"
-webtalk_add_data -client project -key project_iteration -value "11" -context "software_version_and_target_device"
+webtalk_add_data -client project -key project_iteration -value "27" -context "software_version_and_target_device"
 webtalk_add_data -client project -key os_name -value "Microsoft Windows 8 or later , 64-bit" -context "user_environment"
 webtalk_add_data -client project -key os_release -value "major release  (build 9200)" -context "user_environment"
 webtalk_add_data -client project -key cpu_name -value "Intel(R) Xeon(R) CPU           X3460  @ 2.80GHz" -context "user_environment"
@@ -24,9 +24,9 @@ webtalk_add_data -client project -key system_ram -value "12.000 GB" -context "us
 webtalk_register_client -client xsim
 webtalk_add_data -client xsim -key Command -value "xsim" -context "xsim\\command_line_options"
 webtalk_add_data -client xsim -key trace_waveform -value "true" -context "xsim\\usage"
-webtalk_add_data -client xsim -key runtime -value "150 ns" -context "xsim\\usage"
+webtalk_add_data -client xsim -key runtime -value "1 us" -context "xsim\\usage"
 webtalk_add_data -client xsim -key iteration -value "0" -context "xsim\\usage"
-webtalk_add_data -client xsim -key Simulation_Time -value "0.05_sec" -context "xsim\\usage"
-webtalk_add_data -client xsim -key Simulation_Memory -value "5608_KB" -context "xsim\\usage"
-webtalk_transmit -clientid 616236062 -regid "" -xml D:/aqover-pc/Documents/Learning/HWLab/Lab01/Lab01.sim/sim_1/behav/xsim/xsim.dir/testShifter_behav/webtalk/usage_statistics_ext_xsim.xml -html D:/aqover-pc/Documents/Learning/HWLab/Lab01/Lab01.sim/sim_1/behav/xsim/xsim.dir/testShifter_behav/webtalk/usage_statistics_ext_xsim.html -wdm D:/aqover-pc/Documents/Learning/HWLab/Lab01/Lab01.sim/sim_1/behav/xsim/xsim.dir/testShifter_behav/webtalk/usage_statistics_ext_xsim.wdm -intro "<H3>XSIM Usage Report</H3><BR>"
+webtalk_add_data -client xsim -key Simulation_Time -value "0.03_sec" -context "xsim\\usage"
+webtalk_add_data -client xsim -key Simulation_Memory -value "5620_KB" -context "xsim\\usage"
+webtalk_transmit -clientid 2448618493 -regid "" -xml D:/aqover-pc/Documents/Learning/HW Lab I/Verilog/Lab01.sim/sim_1/behav/xsim/xsim.dir/testShifter_behav/webtalk/usage_statistics_ext_xsim.xml -html D:/aqover-pc/Documents/Learning/HW Lab I/Verilog/Lab01.sim/sim_1/behav/xsim/xsim.dir/testShifter_behav/webtalk/usage_statistics_ext_xsim.html -wdm D:/aqover-pc/Documents/Learning/HW Lab I/Verilog/Lab01.sim/sim_1/behav/xsim/xsim.dir/testShifter_behav/webtalk/usage_statistics_ext_xsim.wdm -intro "<H3>XSIM Usage Report</H3><BR>"
 webtalk_terminate

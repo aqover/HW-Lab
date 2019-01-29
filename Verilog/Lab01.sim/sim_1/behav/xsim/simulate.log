@@ -1,29 +1,42 @@
 Vivado Simulator 2018.3
 Time resolution is 1 ps
-time                    0: Input {0}, S1 {x}, S2{x}
-time                 8000: Input {3}, S1 {x}, S2{x}
-time                10000: Input {3}, S1 {3}, S2{X}
-time                16000: Input {0}, S1 {3}, S2{X}
-time                24000: Input {3}, S1 {3}, S2{X}
-time                30000: Input {3}, S1 {3}, S2{3}
-time                32000: Input {0}, S1 {3}, S2{3}
-time                40000: Input {3}, S1 {3}, S2{3}
-time                48000: Input {0}, S1 {3}, S2{3}
-time                50000: Input {2}, S1 {0}, S2{2}
-time                56000: Input {1}, S1 {0}, S2{2}
-time                64000: Input {2}, S1 {0}, S2{2}
-time                70000: Input {2}, S1 {0}, S2{0}
-time                72000: Input {1}, S1 {0}, S2{0}
-time                80000: Input {2}, S1 {0}, S2{0}
-time                88000: Input {1}, S1 {0}, S2{0}
-time                90000: Input {1}, S1 {3}, S2{1}
-time                96000: Input {2}, S1 {3}, S2{1}
-time               104000: Input {1}, S1 {3}, S2{1}
-time               110000: Input {1}, S1 {3}, S2{3}
-time               112000: Input {2}, S1 {3}, S2{3}
-time               120000: Input {1}, S1 {3}, S2{3}
-time               128000: Input {2}, S1 {3}, S2{3}
-time               130000: Input {2}, S1 {0}, S2{2}
-time               136000: Input {1}, S1 {0}, S2{2}
-time               144000: Input {2}, S1 {0}, S2{2}
-$finish called at time : 150 ns : File "D:/aqover-pc/Documents/Learning/HWLab/Lab01/Lab01.srcs/sim_1/new/testShifter.v" Line 44
+time                    0: Input { 0}, S1 { X}, S2{ X}
+time                 5000: Input { 0}, S1 { Z}, S2{ X}
+time                15000: Input { 0}, S1 { Z}, S2{ Z}
+time                80000: Input {15}, S1 { Z}, S2{ Z}
+time                85000: Input {15}, S1 { Z}, S2{ Z}
+time                95000: Input {15}, S1 { Z}, S2{ Z}
+time               160000: Input { 0}, S1 { Z}, S2{ Z}
+time               165000: Input { 0}, S1 { Z}, S2{ Z}
+time               175000: Input { 0}, S1 { Z}, S2{ Z}
+time               240000: Input {15}, S1 { Z}, S2{ Z}
+time               245000: Input {15}, S1 { Z}, S2{ Z}
+time               255000: Input {15}, S1 { Z}, S2{ Z}
+time               320000: Input { 0}, S1 { Z}, S2{ Z}
+time               325000: Input { 0}, S1 { Z}, S2{ Z}
+time               335000: Input { 0}, S1 { Z}, S2{ Z}
+time               400000: Input {15}, S1 { Z}, S2{ Z}
+time               405000: Input {15}, S1 { Z}, S2{ Z}
+time               415000: Input {15}, S1 { Z}, S2{ Z}
+time               480000: Input { 0}, S1 { Z}, S2{ Z}
+time               485000: Input { 0}, S1 { Z}, S2{ Z}
+time               495000: Input { 0}, S1 { Z}, S2{ Z}
+time               560000: Input {15}, S1 { Z}, S2{ Z}
+time               565000: Input {15}, S1 { Z}, S2{ Z}
+time               575000: Input {15}, S1 { Z}, S2{ Z}
+time               640000: Input { 0}, S1 { Z}, S2{ Z}
+time               645000: Input { 0}, S1 { Z}, S2{ Z}
+time               655000: Input { 0}, S1 { Z}, S2{ Z}
+time               720000: Input {15}, S1 { Z}, S2{ Z}
+time               725000: Input {15}, S1 { Z}, S2{ Z}
+time               735000: Input {15}, S1 { Z}, S2{ Z}
+time               800000: Input { 0}, S1 { Z}, S2{ Z}
+time               805000: Input { 0}, S1 { Z}, S2{ Z}
+time               815000: Input { 0}, S1 { Z}, S2{ Z}
+time               880000: Input {15}, S1 { Z}, S2{ Z}
+time               885000: Input {15}, S1 { Z}, S2{ Z}
+time               895000: Input {15}, S1 { Z}, S2{ Z}
+time               960000: Input { 0}, S1 { Z}, S2{ Z}
+time               965000: Input { 0}, S1 { Z}, S2{ Z}
+time               975000: Input { 0}, S1 { Z}, S2{ Z}
+$finish called at time : 1 us : File "D:/aqover-pc/Documents/Learning/HW Lab I/Verilog/Lab01.srcs/sim_1/new/testShifter.v" Line 42

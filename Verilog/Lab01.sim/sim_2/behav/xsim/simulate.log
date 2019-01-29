@@ -1,0 +1,128 @@
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+time                    0: Input { 0}, S1 { x}, S2{ x}
+time                 5000: Input { 0}, S1 { 0}, S2{ X}
+time                15000: Input { 0}, S1 { 0}, S2{ X}
+time                25000: Input { 0}, S1 { 0}, S2{ X}
+time                35000: Input { 0}, S1 { 0}, S2{ 0}
+time                40000: Input {15}, S1 { 0}, S2{ 0}
+time                45000: Input {15}, S1 {15}, S2{ 1}
+time                55000: Input {15}, S1 {15}, S2{ 3}
+time                65000: Input {15}, S1 {15}, S2{ 7}
+time                75000: Input {15}, S1 {15}, S2{15}
+time                80000: Input { 0}, S1 {15}, S2{15}
+time                85000: Input { 0}, S1 { 0}, S2{14}
+time                95000: Input { 0}, S1 { 0}, S2{12}
+time               105000: Input { 0}, S1 { 0}, S2{ 8}
+time               115000: Input { 0}, S1 { 0}, S2{ 0}
+time               120000: Input {15}, S1 { 0}, S2{ 0}
+time               125000: Input {15}, S1 {15}, S2{ 1}
+time               135000: Input {15}, S1 {15}, S2{ 3}
+time               145000: Input {15}, S1 {15}, S2{ 7}
+time               155000: Input {15}, S1 {15}, S2{15}
+time               160000: Input { 0}, S1 {15}, S2{15}
+time               165000: Input { 0}, S1 { 0}, S2{14}
+time               175000: Input { 0}, S1 { 0}, S2{12}
+time               185000: Input { 0}, S1 { 0}, S2{ 8}
+time               195000: Input { 0}, S1 { 0}, S2{ 0}
+time               200000: Input {15}, S1 { 0}, S2{ 0}
+time               205000: Input {15}, S1 {15}, S2{ 1}
+time               215000: Input {15}, S1 {15}, S2{ 3}
+time               225000: Input {15}, S1 {15}, S2{ 7}
+time               235000: Input {15}, S1 {15}, S2{15}
+time               240000: Input { 0}, S1 {15}, S2{15}
+time               245000: Input { 0}, S1 { 0}, S2{14}
+time               255000: Input { 0}, S1 { 0}, S2{12}
+time               265000: Input { 0}, S1 { 0}, S2{ 8}
+time               275000: Input { 0}, S1 { 0}, S2{ 0}
+time               280000: Input {15}, S1 { 0}, S2{ 0}
+time               285000: Input {15}, S1 {15}, S2{ 1}
+time               295000: Input {15}, S1 {15}, S2{ 3}
+time               305000: Input {15}, S1 {15}, S2{ 7}
+time               315000: Input {15}, S1 {15}, S2{15}
+time               320000: Input { 0}, S1 {15}, S2{15}
+time               325000: Input { 0}, S1 { 0}, S2{14}
+time               335000: Input { 0}, S1 { 0}, S2{12}
+time               345000: Input { 0}, S1 { 0}, S2{ 8}
+time               355000: Input { 0}, S1 { 0}, S2{ 0}
+time               360000: Input {15}, S1 { 0}, S2{ 0}
+time               365000: Input {15}, S1 {15}, S2{ 1}
+time               375000: Input {15}, S1 {15}, S2{ 3}
+time               385000: Input {15}, S1 {15}, S2{ 7}
+time               395000: Input {15}, S1 {15}, S2{15}
+time               400000: Input { 0}, S1 {15}, S2{15}
+time               405000: Input { 0}, S1 { 0}, S2{14}
+time               415000: Input { 0}, S1 { 0}, S2{12}
+time               425000: Input { 0}, S1 { 0}, S2{ 8}
+time               435000: Input { 0}, S1 { 0}, S2{ 0}
+time               440000: Input {15}, S1 { 0}, S2{ 0}
+time               445000: Input {15}, S1 {15}, S2{ 1}
+time               455000: Input {15}, S1 {15}, S2{ 3}
+time               465000: Input {15}, S1 {15}, S2{ 7}
+time               475000: Input {15}, S1 {15}, S2{15}
+time               480000: Input { 0}, S1 {15}, S2{15}
+time               485000: Input { 0}, S1 { 0}, S2{14}
+time               495000: Input { 0}, S1 { 0}, S2{12}
+time               505000: Input { 0}, S1 { 0}, S2{ 8}
+time               515000: Input { 0}, S1 { 0}, S2{ 0}
+time               520000: Input {15}, S1 { 0}, S2{ 0}
+time               525000: Input {15}, S1 {15}, S2{ 1}
+time               535000: Input {15}, S1 {15}, S2{ 3}
+time               545000: Input {15}, S1 {15}, S2{ 7}
+time               555000: Input {15}, S1 {15}, S2{15}
+time               560000: Input { 0}, S1 {15}, S2{15}
+time               565000: Input { 0}, S1 { 0}, S2{14}
+time               575000: Input { 0}, S1 { 0}, S2{12}
+time               585000: Input { 0}, S1 { 0}, S2{ 8}
+time               595000: Input { 0}, S1 { 0}, S2{ 0}
+time               600000: Input {15}, S1 { 0}, S2{ 0}
+time               605000: Input {15}, S1 {15}, S2{ 1}
+time               615000: Input {15}, S1 {15}, S2{ 3}
+time               625000: Input {15}, S1 {15}, S2{ 7}
+time               635000: Input {15}, S1 {15}, S2{15}
+time               640000: Input { 0}, S1 {15}, S2{15}
+time               645000: Input { 0}, S1 { 0}, S2{14}
+time               655000: Input { 0}, S1 { 0}, S2{12}
+time               665000: Input { 0}, S1 { 0}, S2{ 8}
+time               675000: Input { 0}, S1 { 0}, S2{ 0}
+time               680000: Input {15}, S1 { 0}, S2{ 0}
+time               685000: Input {15}, S1 {15}, S2{ 1}
+time               695000: Input {15}, S1 {15}, S2{ 3}
+time               705000: Input {15}, S1 {15}, S2{ 7}
+time               715000: Input {15}, S1 {15}, S2{15}
+time               720000: Input { 0}, S1 {15}, S2{15}
+time               725000: Input { 0}, S1 { 0}, S2{14}
+time               735000: Input { 0}, S1 { 0}, S2{12}
+time               745000: Input { 0}, S1 { 0}, S2{ 8}
+time               755000: Input { 0}, S1 { 0}, S2{ 0}
+time               760000: Input {15}, S1 { 0}, S2{ 0}
+time               765000: Input {15}, S1 {15}, S2{ 1}
+time               775000: Input {15}, S1 {15}, S2{ 3}
+time               785000: Input {15}, S1 {15}, S2{ 7}
+time               795000: Input {15}, S1 {15}, S2{15}
+time               800000: Input { 0}, S1 {15}, S2{15}
+time               805000: Input { 0}, S1 { 0}, S2{14}
+time               815000: Input { 0}, S1 { 0}, S2{12}
+time               825000: Input { 0}, S1 { 0}, S2{ 8}
+time               835000: Input { 0}, S1 { 0}, S2{ 0}
+time               840000: Input {15}, S1 { 0}, S2{ 0}
+time               845000: Input {15}, S1 {15}, S2{ 1}
+time               855000: Input {15}, S1 {15}, S2{ 3}
+time               865000: Input {15}, S1 {15}, S2{ 7}
+time               875000: Input {15}, S1 {15}, S2{15}
+time               880000: Input { 0}, S1 {15}, S2{15}
+time               885000: Input { 0}, S1 { 0}, S2{14}
+time               895000: Input { 0}, S1 { 0}, S2{12}
+time               905000: Input { 0}, S1 { 0}, S2{ 8}
+time               915000: Input { 0}, S1 { 0}, S2{ 0}
+time               920000: Input {15}, S1 { 0}, S2{ 0}
+time               925000: Input {15}, S1 {15}, S2{ 1}
+time               935000: Input {15}, S1 {15}, S2{ 3}
+time               945000: Input {15}, S1 {15}, S2{ 7}
+time               955000: Input {15}, S1 {15}, S2{15}
+time               960000: Input { 0}, S1 {15}, S2{15}
+time               965000: Input { 0}, S1 { 0}, S2{14}
+time               975000: Input { 0}, S1 { 0}, S2{12}
+time               985000: Input { 0}, S1 { 0}, S2{ 8}
+time               995000: Input { 0}, S1 { 0}, S2{ 0}
+$finish called at time : 1 us : File "D:/aqover-pc/Documents/Learning/HW Lab I/Verilog/Lab01.srcs/sim_1/new/testShifter.v" Line 42

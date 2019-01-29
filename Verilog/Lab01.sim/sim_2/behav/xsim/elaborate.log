@@ -1,0 +1,16 @@
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe -wto 38e4341b31ab4fbdb70bd9c6024e776b --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot testShifter_behav xil_defaultlib.testShifter xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-3091] actual bit length 4 differs from formal bit length 1 for port 'd' [D:/aqover-pc/Documents/Learning/HW Lab I/Verilog/Lab01.srcs/sim_1/new/testShifter.v:30]
+WARNING: [VRFC 10-3091] actual bit length 4 differs from formal bit length 1 for port 'd' [D:/aqover-pc/Documents/Learning/HW Lab I/Verilog/Lab01.srcs/sim_1/new/testShifter.v:31]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.shiftA
+Compiling module xil_defaultlib.shiftB
+Compiling module xil_defaultlib.testShifter
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot testShifter_behav
