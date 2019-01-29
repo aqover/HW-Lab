@@ -1,0 +1,5 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/aqover-pc/Documents/Learning/HW Lab I/Verilog/Lab02.srcs/sources_1/new/timeClockDivider.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dFlipFlop
+INFO: [VRFC 10-311] analyzing module timeClockDivider
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/aqover-pc/Documents/Learning/HW Lab I/Verilog/Lab02.srcs/sim_1/new/testerClockDivider.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module testerClockDivider
