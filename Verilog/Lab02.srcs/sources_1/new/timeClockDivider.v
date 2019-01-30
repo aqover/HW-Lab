@@ -42,22 +42,33 @@ endmodule
 module timeClockDivider(
     output reg fClk,
     input wire clk,
-    input wire [0:1]div
+    input wire [2:0]div
 );
 
-wire f2, f2n, f4, f4n, f8, f8n;
-dFlipFlop df1(f2, f2n, clk, f2n);
-dFlipFlop df2(f4, f4n, f2, f4n);
-dFlipFlop df3(f8, f8n, f4, f8n);
+parameter bit = 8;
+wire f[bit-1:0];
+wire fn[bit-1:0];
+
+assign f[0] = clk;
+
+genvar i;
+generate
+for(i=1; i < bit; i=i+1) begin
+    dFlipFlop df(f[i], fn[i], f[i-1], fn[i]);
+end
+endgenerate
 
 always @(clk)
-begin
-    case(div)
-        2'b00: fClk = !clk;
-        2'b01: fClk = f2;
-        2'b10: fClk = f4;
-        2'b11: fClk = f8;
+    casez(div)
+        3'b000: fClk = f[0];
+        3'b001: fClk = f[1];
+        3'b010: fClk = f[2];
+        3'b011: fClk = f[3];
+        3'b100: fClk = f[4];
+        3'b101: fClk = f[5];
+        3'b110: fClk = f[6];
+        3'b111: fClk = f[7];
+        default: fClk = clk;
     endcase
-end
 
 endmodule

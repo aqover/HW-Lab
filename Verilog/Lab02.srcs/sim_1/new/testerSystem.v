@@ -3,9 +3,9 @@
 // Company: 
 // Engineer: 
 // 
-// Create Date: 01/30/2019 03:24:38 AM
+// Create Date: 01/31/2019 03:01:34 AM
 // Design Name: 
-// Module Name: testerClockDivider
+// Module Name: testerSystem
 // Project Name: 
 // Target Devices: 
 // Tool Versions: 
@@ -20,22 +20,19 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module testerClockDivider;
+module testerSystem();
 
 reg clk;
-reg [2:0]div;
-wire fClk;
+wire [7:0]seg;
+wire [3:0]an;
 
-timeClockDivider cd1(fClk, clk, div);
+system s1(seg, an, clk);
 
-always #5 clk=~clk;
+always #5 clk = ~clk;
 
 initial
 begin
     #0 clk = 0;
-    div = 3'b111;
-    #1000;
-    $finish;
 end
 
 endmodule
