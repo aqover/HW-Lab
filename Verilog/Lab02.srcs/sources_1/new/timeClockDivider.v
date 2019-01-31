@@ -68,7 +68,7 @@ always @(clk)
         3'b101: fClk = f[5];
         3'b110: fClk = f[6];
         3'b111: fClk = f[7];
-        default: fClk = clk;
+        default: fClk = ~clk;
     endcase
 
 endmodule

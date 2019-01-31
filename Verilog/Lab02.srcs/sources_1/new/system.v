@@ -26,31 +26,27 @@ module system(
     input clk
 );
 
-//wire [3:0]anTmp;
-//wire [7:0] segTmp;
+parameter div_clk = 4;
 
 reg [3:0] hex0, hex1, hex2, hex3;
 wire [3:0]fClk;
-reg [2:0]div[3:0];
+reg [2:0]div[div_clk-1:0];
 
 assign fClk[0] = clk;
 
 generate
 genvar i;
-for(i=1;i<4;i=i+1)
+for(i=1;i<div_clk;i=i+1)
     timeClockDivider tCD(fClk[i], fClk[i-1], div[i]);
 endgenerate
-quadSegment QS(seg, an, hex0, hex1, hex2, hex3, fClk[3]);
-
-//always @(segTmp) seg = segTmp;
-//always @(anTmp) an = anTmp;
+quadSegment QS(seg, an, hex0, hex1, hex2, hex3, fClk[div_clk-1]);
 
 initial
 begin
-    div[0] = 2;
-    div[1] = 5;
+    div[0] = 7;
+    div[1] = 7;
     div[2] = 7;
-    div[3] = 7;
+    div[3] = 1;
     hex0 = 4;
     hex1 = 3;
     hex2 = 2;

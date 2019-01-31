@@ -23,7 +23,7 @@
 module testerSystem();
 
 reg clk;
-wire [7:0]seg;
+wire [6:0]seg;
 wire [3:0]an;
 
 system s1(seg, an, clk);
@@ -33,6 +33,9 @@ always #5 clk = ~clk;
 initial
 begin
     #0 clk = 0;
+    
+    #1000000000;
+    $finish;
 end
 
 endmodule
