@@ -22,8 +22,12 @@ module segmentDriver(
     output [6:0] seg,
     output reg [3:0] an,
     input wire [15:0] hex,
-    input wire clk
+    input wire fClk
 );
+
+wire clk;
+reg [4:0]bit = 20-1;
+clkDivide cd(clk, fClk, bit);
 
 reg [1:0] pos;
 reg [3:0] hexSel;

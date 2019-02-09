@@ -20,9 +20,10 @@
 //////////////////////////////////////////////////////////////////////////////////
 module clkDivide(
     output reg fClk,
-    input wire clk
+    input wire clk,
+    input wire [4:0] bit
     );
-parameter bitDiv=20;
+parameter bitDiv=22;
 
 wire [bitDiv-1:0] f, d;
 
@@ -32,7 +33,7 @@ genvar i;
 for(i=1;i<bitDiv;i = i+1)
     flipflop ff(f[i], d[i], d[i], f[i-1]);
     
- always @(f[bitDiv-1]) fClk = f[bitDiv-1];
+always @(f[bit[4:0]]) fClk = f[bit[4:0]];
     
 endmodule
 
