@@ -1,0 +1,193 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Sun Feb 17 20:32:37 2019" VIVADOVERSION="2018.3">
+
+  <SYSTEMINFO ARCH="artix7" BOARD="digilentinc.com:basys3:part0:1.1" DEVICE="7a35t" NAME="system3" PACKAGE="cpg236" SPEEDGRADE="-1"/>
+
+  <EXTERNALPORTS>
+    <PORT DIR="O" LEFT="6" NAME="seg" RIGHT="0" SIGIS="undef" SIGNAME="segmentDriver_0_seg">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="segmentDriver_0" PORT="seg"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="3" NAME="an" RIGHT="0" SIGIS="undef" SIGNAME="segmentDriver_0_an">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="segmentDriver_0" PORT="an"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="clk" SIGIS="undef" SIGNAME="External_Ports_clk">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="segmentDriver_0" PORT="fClk"/>
+        <CONNECTION INSTANCE="clkDivide_0" PORT="clk"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="btnU" SIGIS="undef" SIGNAME="External_Ports_btnU">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="calculator_0" PORT="add"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="btnL" SIGIS="undef" SIGNAME="External_Ports_btnL">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="calculator_0" PORT="multiply"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="btnR" SIGIS="undef" SIGNAME="External_Ports_btnR">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="calculator_0" PORT="devide"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="btnD" SIGIS="undef" SIGNAME="External_Ports_btnD">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="calculator_0" PORT="sub"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" LEFT="3" NAME="swA" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_swA">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="calculator_0" PORT="a"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" LEFT="3" NAME="swB" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_swB">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="calculator_0" PORT="b"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="btnC" SIGIS="undef" SIGNAME="External_Ports_btnC">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="calculator_0" PORT="clear"/>
+      </CONNECTIONS>
+    </PORT>
+  </EXTERNALPORTS>
+
+  <EXTERNALINTERFACES/>
+
+  <MODULES>
+    <MODULE COREREVISION="1" FULLNAME="/calculator_0" HWVERSION="1.0" INSTANCE="calculator_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="calculator" VLNV="xilinx.com:module_ref:calculator:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="system3_calculator_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="O" LEFT="15" NAME="out" RIGHT="0" SIGIS="undef" SIGNAME="calculator_0_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="segmentDriver_0" PORT="hex"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="3" NAME="a" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_swA">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="swA"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="3" NAME="b" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_swB">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="swB"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="add" SIGIS="undef" SIGNAME="External_Ports_btnU">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="btnU"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="sub" SIGIS="undef" SIGNAME="External_Ports_btnD">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="btnD"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="multiply" SIGIS="undef" SIGNAME="External_Ports_btnL">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="btnL"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="devide" SIGIS="undef" SIGNAME="External_Ports_btnR">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="btnR"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="clear" SIGIS="undef" SIGNAME="External_Ports_btnC">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="btnC"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="clkDivide_0_fClk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="clkDivide_0" PORT="fClk"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/clkDivide_0" HWVERSION="1.0" INSTANCE="clkDivide_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="clkDivide" VLNV="xilinx.com:module_ref:clkDivide:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="bitDiv" VALUE="22"/>
+        <PARAMETER NAME="Component_Name" VALUE="system3_clkDivide_0_1"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="O" NAME="fClk" SIGIS="undef" SIGNAME="clkDivide_0_fClk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="calculator_0" PORT="clk"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="External_Ports_clk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="clk"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="4" NAME="bit" RIGHT="0" SIGIS="undef" SIGNAME="xlconstant_0_dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="xlconstant_0" PORT="dout"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/segmentDriver_0" HWVERSION="1.0" INSTANCE="segmentDriver_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="segmentDriver" VLNV="xilinx.com:module_ref:segmentDriver:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="system3_segmentDriver_0_1"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="O" LEFT="6" NAME="seg" RIGHT="0" SIGIS="undef" SIGNAME="segmentDriver_0_seg">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="seg"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="3" NAME="an" RIGHT="0" SIGIS="undef" SIGNAME="segmentDriver_0_an">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="an"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="15" NAME="hex" RIGHT="0" SIGIS="undef" SIGNAME="calculator_0_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="calculator_0" PORT="out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="fClk" SIGIS="undef" SIGNAME="External_Ports_clk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="clk"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="5" FULLNAME="/xlconstant_0" HWVERSION="1.1" INSTANCE="xlconstant_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="xlconstant" VLNV="xilinx.com:ip:xlconstant:1.1">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="CONST_WIDTH" VALUE="5"/>
+        <PARAMETER NAME="CONST_VAL" VALUE="0x0A"/>
+        <PARAMETER NAME="Component_Name" VALUE="system3_xlconstant_0_1"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="O" LEFT="4" NAME="dout" RIGHT="0" SIGIS="undef" SIGNAME="xlconstant_0_dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="clkDivide_0" PORT="bit"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+  </MODULES>
+
+</EDKSYSTEM>

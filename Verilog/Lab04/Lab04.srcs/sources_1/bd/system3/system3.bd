@@ -1,0 +1,250 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0xB849297B20A50DAF",
+      "device": "xc7a35tcpg236-1",
+      "name": "system3",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2018.3",
+      "validated": "true"
+    },
+    "design_tree": {
+      "segmentDriver_0": "",
+      "xlconstant_0": "",
+      "clkDivide_0": "",
+      "calculator_0": ""
+    },
+    "ports": {
+      "seg": {
+        "direction": "O",
+        "left": "6",
+        "right": "0"
+      },
+      "an": {
+        "direction": "O",
+        "left": "3",
+        "right": "0"
+      },
+      "clk": {
+        "direction": "I"
+      },
+      "btnU": {
+        "direction": "I"
+      },
+      "btnL": {
+        "direction": "I"
+      },
+      "btnR": {
+        "direction": "I"
+      },
+      "btnD": {
+        "direction": "I"
+      },
+      "swA": {
+        "direction": "I",
+        "left": "3",
+        "right": "0"
+      },
+      "swB": {
+        "direction": "I",
+        "left": "3",
+        "right": "0"
+      },
+      "btnC": {
+        "direction": "I"
+      }
+    },
+    "components": {
+      "segmentDriver_0": {
+        "vlnv": "xilinx.com:module_ref:segmentDriver:1.0",
+        "xci_name": "system3_segmentDriver_0_1",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "segmentDriver",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "seg": {
+            "direction": "O",
+            "left": "6",
+            "right": "0"
+          },
+          "an": {
+            "direction": "O",
+            "left": "3",
+            "right": "0"
+          },
+          "hex": {
+            "direction": "I",
+            "left": "15",
+            "right": "0"
+          },
+          "fClk": {
+            "direction": "I"
+          }
+        }
+      },
+      "xlconstant_0": {
+        "vlnv": "xilinx.com:ip:xlconstant:1.1",
+        "xci_name": "system3_xlconstant_0_1",
+        "parameters": {
+          "CONST_VAL": {
+            "value": "10"
+          },
+          "CONST_WIDTH": {
+            "value": "5"
+          }
+        }
+      },
+      "clkDivide_0": {
+        "vlnv": "xilinx.com:module_ref:clkDivide:1.0",
+        "xci_name": "system3_clkDivide_0_1",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "clkDivide",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I"
+          },
+          "fClk": {
+            "direction": "O"
+          },
+          "bit": {
+            "direction": "I",
+            "left": "4",
+            "right": "0"
+          }
+        }
+      },
+      "calculator_0": {
+        "vlnv": "xilinx.com:module_ref:calculator:1.0",
+        "xci_name": "system3_calculator_0_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "calculator",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I"
+          },
+          "out": {
+            "direction": "O",
+            "left": "15",
+            "right": "0"
+          },
+          "a": {
+            "direction": "I",
+            "left": "3",
+            "right": "0"
+          },
+          "b": {
+            "direction": "I",
+            "left": "3",
+            "right": "0"
+          },
+          "add": {
+            "direction": "I"
+          },
+          "sub": {
+            "direction": "I"
+          },
+          "multiply": {
+            "direction": "I"
+          },
+          "devide": {
+            "direction": "I"
+          },
+          "clear": {
+            "direction": "I"
+          }
+        }
+      }
+    },
+    "nets": {
+      "segmentDriver_0_seg": {
+        "ports": [
+          "segmentDriver_0/seg",
+          "seg"
+        ]
+      },
+      "segmentDriver_0_an": {
+        "ports": [
+          "segmentDriver_0/an",
+          "an"
+        ]
+      },
+      "clk_1": {
+        "ports": [
+          "clk",
+          "segmentDriver_0/fClk",
+          "clkDivide_0/clk"
+        ]
+      },
+      "calculator_0_out": {
+        "ports": [
+          "calculator_0/out",
+          "segmentDriver_0/hex"
+        ]
+      },
+      "swA_1": {
+        "ports": [
+          "swA",
+          "calculator_0/a"
+        ]
+      },
+      "btnU_1": {
+        "ports": [
+          "btnU",
+          "calculator_0/add"
+        ]
+      },
+      "btnD_1": {
+        "ports": [
+          "btnD",
+          "calculator_0/sub"
+        ]
+      },
+      "btnL_1": {
+        "ports": [
+          "btnL",
+          "calculator_0/multiply"
+        ]
+      },
+      "btnR_1": {
+        "ports": [
+          "btnR",
+          "calculator_0/devide"
+        ]
+      },
+      "clkDivide_0_fClk": {
+        "ports": [
+          "clkDivide_0/fClk",
+          "calculator_0/clk"
+        ]
+      },
+      "xlconstant_0_dout": {
+        "ports": [
+          "xlconstant_0/dout",
+          "clkDivide_0/bit"
+        ]
+      },
+      "swB_1": {
+        "ports": [
+          "swB",
+          "calculator_0/b"
+        ]
+      },
+      "btnC_1": {
+        "ports": [
+          "btnC",
+          "calculator_0/clear"
+        ]
+      }
+    }
+  }
+}
