@@ -36,10 +36,12 @@ module calculator(
     );
     
 
-reg [7:0]sum;
-assign out[3:0] = btn[3][12:9];
-assign out[7:4] = btn[3][8:5];
-assign out[15:8] = sum; 
+reg [11:0]sum;
+reg [3:0]outs[2:0];
+assign out[3:0] = outs[0];
+assign out[7:4] = outs[1];
+assign out[11:8] = outs[2];
+assign out[15:12] = 4'b0;
 
 wire [12:0]btn[4:0];
 assign btn[0] = {a, b, clear, add, sub, multiply, devide};
@@ -60,4 +62,9 @@ always @(posedge clk)
     5'b00010: sum = btn[3][12:9] * btn[3][8:5];
     5'b00001: sum = btn[3][12:9] / btn[3][8:5];
     endcase
+always @(sum) begin
+    outs[0] = sum % 10;
+    outs[1] = (sum / 10) % 10;
+    outs[2] = (sum / 100) % 10;
+end
 endmodule

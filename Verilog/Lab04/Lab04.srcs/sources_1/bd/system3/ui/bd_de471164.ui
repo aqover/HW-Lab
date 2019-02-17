@@ -25,12 +25,12 @@ preplace netloc btnL_1 1 0 3 NJ 140 NJ 140 NJ
 preplace netloc btnU_1 1 0 3 NJ 100 NJ 100 NJ
 preplace netloc swB_1 1 0 3 NJ 80 NJ 80 NJ
 preplace netloc xlconstant_0_dout 1 1 1 NJ
-preplace netloc clk_1 1 0 4 NJ 260 180 260 NJ 260 600
+preplace netloc clk_1 1 0 4 NJ 260 180 260 NJ 260 610
 preplace netloc clkDivide_0_fClk 1 2 1 380
 preplace netloc btnR_1 1 0 3 NJ 160 NJ 160 NJ
 preplace netloc calculator_0_out 1 3 1 N
 preplace netloc segmentDriver_0_seg 1 4 1 NJ
-levelinfo -pg 1 0 100 280 490 710 840 -top 0 -bot 400
+levelinfo -pg 1 0 100 280 500 740 880 -top 0 -bot 400
 "
 }
 0

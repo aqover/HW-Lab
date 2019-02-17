@@ -87,14 +87,14 @@
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
-        <CompFileExtendedInfo CompFileName="system3.bd" FileRelPathName="ip/system3_segmentDriver_0_1/system3_segmentDriver_0_1.xci">
-          <Proxy FileSetName="system3_segmentDriver_0_1"/>
+        <CompFileExtendedInfo CompFileName="system3.bd" FileRelPathName="ip/system3_calculator_0_0/system3_calculator_0_0.xci">
+          <Proxy FileSetName="system3_calculator_0_0"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="system3.bd" FileRelPathName="ip/system3_clkDivide_0_1/system3_clkDivide_0_1.xci">
           <Proxy FileSetName="system3_clkDivide_0_1"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="system3.bd" FileRelPathName="ip/system3_calculator_0_0/system3_calculator_0_0.xci">
-          <Proxy FileSetName="system3_calculator_0_0"/>
+        <CompFileExtendedInfo CompFileName="system3.bd" FileRelPathName="ip/system3_segmentDriver_0_1/system3_segmentDriver_0_1.xci">
+          <Proxy FileSetName="system3_segmentDriver_0_1"/>
         </CompFileExtendedInfo>
       </File>
       <File Path="$PSRCDIR/sources_1/new/Stack-LIFO.v">
@@ -316,9 +316,7 @@
     </Run>
     <Run Id="system3_segmentDriver_0_1_synth_1" Type="Ft3:Synth" SrcSet="system3_segmentDriver_0_1" Part="xc7a35tcpg236-1" ConstrsSet="system3_segmentDriver_0_1" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/system3_segmentDriver_0_1_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018"/>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -327,9 +325,7 @@
     </Run>
     <Run Id="system3_clkDivide_0_1_synth_1" Type="Ft3:Synth" SrcSet="system3_clkDivide_0_1" Part="xc7a35tcpg236-1" ConstrsSet="system3_clkDivide_0_1" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/system3_clkDivide_0_1_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018"/>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -366,9 +362,7 @@
     </Run>
     <Run Id="system3_segmentDriver_0_1_impl_1" Type="Ft2:EntireDesign" Part="xc7a35tcpg236-1" ConstrsSet="system3_segmentDriver_0_1" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="system3_segmentDriver_0_1_synth_1" IncludeInArchive="false" GenFullBitstream="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -384,9 +378,7 @@
     </Run>
     <Run Id="system3_clkDivide_0_1_impl_1" Type="Ft2:EntireDesign" Part="xc7a35tcpg236-1" ConstrsSet="system3_clkDivide_0_1" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="system3_clkDivide_0_1_synth_1" IncludeInArchive="false" GenFullBitstream="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
