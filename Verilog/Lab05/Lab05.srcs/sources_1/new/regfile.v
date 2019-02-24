@@ -23,7 +23,7 @@ integer i;
 
 initial
 begin
-	for(i=0;i<32;i++)
+	for(i=0;i<32;i=i+1)
 	begin
 		regs[i]=0;
 	end
