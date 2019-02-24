@@ -1,0 +1,5 @@
+Verilog/*/*.cache/
+Verilog/*/*.hw/
+Verilog/*/*.ip_user_files/
+Verilog/*/*.runs/
+Verilog/*/*.sim/
