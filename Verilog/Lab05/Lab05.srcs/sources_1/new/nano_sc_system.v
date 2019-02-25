@@ -1,4 +1,4 @@
-`timescale 1ns / 1ps
+`timescale 1ns / 1ns
 //-------------------------------------------------------
 // File name    : nano_sc_system.v
 // Title        : nanoCPU Single Cycle system.
@@ -7,7 +7,12 @@
 // Developers   : Krerk Piromsopa, Ph. D.
 //              : Chulalongkorn University.
 
-module nano_sc_system();
+module nano_sc_system(
+    output wire [6:0]seg,
+    output wire [3:0]an,
+    input wire [11:0]sw,
+    input wire clk
+);
 wire 	[31:0]	p_address;
 wire 	[31:0]	p_data;
 wire	[31:0]	d_address;
@@ -18,7 +23,7 @@ reg		nreset;
 
 nanocpu	CPU(p_address,p_data,d_address,d_data,mem_wr,clock,nreset);
 rom 	PROGMEM(p_data,p_address[28:2]);
-memory 	DATAMEM(d_data,d_address[28:2],mem_wr,clock);
+memory 	DATAMEM(d_data,d_address[28:2],mem_wr,clk, seg, an, sw);
 
 initial
 begin

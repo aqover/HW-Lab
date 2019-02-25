@@ -18,7 +18,8 @@ module control(
 	ext_ops,
 	alu_ops,
 	opcode,
-	z_flag
+	z_flag,
+	reserved
 	);
 output reg sel_pc;
 output reg sel_addpc;
@@ -28,9 +29,10 @@ output reg sel_data;
 output reg reg_wr;
 output reg mem_wr;
 output reg [1:0] ext_ops;
-output reg [1:0] alu_ops;
+output reg [2:0] alu_ops;
 input [5:0] opcode;
 input z_flag;
+input [10:0] reserved;
 
 localparam ORI=6'b010000;
 localparam ORUI=6'b010001;
@@ -127,10 +129,11 @@ end
 always @(opcode)
 begin
 	case (opcode)
-		ORI : alu_ops=2'b01;
-		ORUI : alu_ops=2'b01;
-		BEQ : alu_ops=2'b10;
-		default : alu_ops=2'b00;
+		ORI : alu_ops=3'b010;
+		ORUI : alu_ops=3'b010;
+		BEQ : alu_ops=3'b100;
+		ADD : alu_ops = reserved[2:0];
+		default : alu_ops=3'b000;
 	endcase
 end
 
