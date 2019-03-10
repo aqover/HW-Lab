@@ -126,12 +126,12 @@ begin
 end
 
 // alu_ops
-always @(opcode)
+always @(opcode, reserved)
 begin
 	case (opcode)
 		ORI : alu_ops=3'b010;
 		ORUI : alu_ops=3'b010;
-		BEQ : alu_ops=3'b100;
+		BEQ : alu_ops=3'b001;
 		ADD : alu_ops = reserved[2:0];
 		default : alu_ops=3'b000;
 	endcase

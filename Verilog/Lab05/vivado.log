@@ -1,0 +1,24 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Sun Mar 10 12:08:12 2019
+# Process ID: 13160
+# Current directory: D:/aqover-pc/Documents/Learning/HWLabI/Verilog/Lab05
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent8872 D:\aqover-pc\Documents\Learning\HWLabI\Verilog\Lab05\Lab05.xpr
+# Log file: D:/aqover-pc/Documents/Learning/HWLabI/Verilog/Lab05/vivado.log
+# Journal file: D:/aqover-pc/Documents/Learning/HWLabI/Verilog/Lab05\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/aqover-pc/Documents/Learning/HWLabI/Verilog/Lab05/Lab05.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [Common 17-41] Interrupt caught. Command should exit soon.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/Vivado/2018.3/data/ip'.
+INFO: [IP_Flow 19-2338] Canceling the changes to the IP catalog. Reverting the catalog back to its previous state.
+INFO: [IP_Flow 19-2340] The IP catalog has been returned to its previous state.
+INFO: [Common 17-344] 'open_project' was cancelled
+exit
+INFO: [Common 17-206] Exiting Vivado at Sun Mar 10 12:09:26 2019...
