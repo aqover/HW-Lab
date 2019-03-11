@@ -19,28 +19,29 @@ LW $r11 0($r5)
 LW $r12 0($r6)
 
 // JMP display
-
+// reset r7 to zero
+ADD $r20 $r20 $r31 011
 ADD $r7 $r7 $r31 011
 BEQ $r12 $r7 add
-
+// plus one to r7 = 1
 ADD $r7 $r7 $r30 000
 BEQ $r12 $r7 sub
-
+// plus one to r7 = 2
 ADD $r7 $r7 $r30 000
 BEQ $r12 $r7 or
-
+// plus one to r7 = 3
 ADD $r7 $r7 $r30 000
 BEQ $r12 $r7 and
-
+// plus one to r7 = 4
 ADD $r7 $r7 $r30 000
 BEQ $r12 $r7 xor
-
+// plus one to r7 = 5
 ADD $r7 $r7 $r30 000
 BEQ $r12 $r7 notA
-
+// plus one to r7 = 6
 ADD $r7 $r7 $r30 000
 BEQ $r12 $r7 comA
-
+// plus one to r7 = 7
 ADD $r7 $r7 $r30 000
 BEQ $r12 $r7 comB
 

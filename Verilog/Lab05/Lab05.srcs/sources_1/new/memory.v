@@ -67,7 +67,7 @@ begin : MEM_WRITE
        case(address[15:0])
        16'hFFF0: hex[3:0] = data[3:0];
        16'hFFF4: hex[7:4] = data[3:0];
-       16'hFFF8: hex[11:8] = data[3:0];
+       16'hFFF8: hex[15:8] = data[7:0];
        16'hFFFC: hex[15:12] = data[3:0];
 //       32'hFFE0, 32'hFFE4, 32'hFFE8: 
 	   default: mem[address] = data[7:0];
