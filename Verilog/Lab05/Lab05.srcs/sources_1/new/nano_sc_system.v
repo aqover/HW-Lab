@@ -23,9 +23,9 @@ wire	[31:0]	d_data;
 reg		clock;
 reg		nreset;
 
-nanocpu	CPU(p_address,p_data,d_address,d_data,mem_wr,clock,nreset);
+nanocpu	CPU(p_address,p_data,d_address,d_data,mem_wr,clk,nreset);
 rom 	PROGMEM(p_data,p_address[17:2]);
-memory 	DATAMEM(d_data,d_address[15:0],mem_wr,clock, seg, an, led, sw);
+memory 	DATAMEM(d_data,d_address[15:0],mem_wr,clk, seg, an, led, sw);
 
 initial
 begin
