@@ -68,9 +68,10 @@ always @(posedge rdy) begin
 			$finish;
 		end
 		data <= data + 1'b1;
+		// data <= 8'h39;
 		enable <= 1'b1;
 		#2 enable <= 1'b0;
-		$display("SEND: tx data %x", data);
+//		$display("SEND: tx data %x", data);
 	end
 end
 

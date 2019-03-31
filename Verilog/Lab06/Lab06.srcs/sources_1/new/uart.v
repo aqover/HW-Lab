@@ -60,7 +60,7 @@ module top_uart(
                 rstate <= STATE_RX_PUSH;
         end
         STATE_RX_PUSH: begin
-            fifo[q] <= RData;
+            fifo[q] = RData;
             q <= (q + 1) % QUEUE_SIZE;
             RClear <= 1;
             rstate <= STATE_RX_WAIT;
@@ -74,17 +74,17 @@ module top_uart(
 
         case(tstate)
         STATE_TX_IDLE: begin
-            if ((p < q) && !TFlag) begin
+            if ((p != q) && !TFlag) begin
                 tstate <= STATE_TX_POP;
             end
         end
         STATE_TX_POP: begin
-            TData <= fifo[p];
+            TData = fifo[p];
             p <= (p + 1) % QUEUE_SIZE;
             tstate <= STATE_TX_ADD;
         end
         STATE_TX_ADD: begin
-            TData <= TData;
+            TData <= TData + 1;
             tstate <= STATE_TX_SEND;
         end
         STATE_TX_SEND: begin
@@ -117,9 +117,10 @@ module uart(
 
     wire rx_en, tx_en;
     assign led = {TxBusy, RxFlag};
-    baud_rate_gen uart_buadrate(rx_en, tx_en, clk);
-    uart_rx receive(RxData, RxFlag, RxClear, rx_en, clk, RxD );
-    uart_tx transmit(TxD, TxBusy, TxData, TxWrite, tx_en, clk);
+    baud_rate_gen uart_buadrate(.rxclk_en(rx_en), .txclk_en(tx_en), .clk(clk));    
+    uart_rx receive(.RData(RxData), .ready(RxFlag), .clear(RxClear), .en(rx_en), .clk(clk), .RxD(RxD));
+    uart_tx transmit(.TxD(TxD), .busy(TxBusy), .Data(TxData), .wr_en(TxWrite), .en(tx_en), .clk(clk));
+    initial $monitor("uart: Tx: %x, Rx: %x", TxData, RxData);
 endmodule
 
 module baud_rate_gen(
@@ -155,7 +156,7 @@ module baud_rate_gen(
 endmodule
 
 module uart_rx(
-    output reg [7:0] Data,
+    output [7:0] RData,
     output reg ready,
     input wire clear,
     input wire en,
@@ -169,13 +170,13 @@ module uart_rx(
 
     reg [1:0] state = RX_STATE_START;
     reg [7:0] tmp_data;
-    integer counter, bitpos;
-
+    integer counter;
+    reg [4:0] bitpos;
+    reg [7:0] RData = 0;
 
     initial begin
         ready = 0;
         counter = 0;
-        Data = 0;
     end
     always @(posedge clk) begin
         if (clear) ready = 0; 
@@ -184,12 +185,12 @@ module uart_rx(
             case(state)
             RX_STATE_START: begin
                 if (!RxD || counter != 0)
-                   counter <= counter + 1;
+                   counter <= (counter + 1) % 16;
                 
                 if (counter == 15) begin
                     state <= RX_STATE_DATA;
                     counter <= 0;
-                    tmp_data <= 0;
+                    tmp_data <= 8'b0;
                     bitpos <= 0;
                 end
     //            $display("%d, uart rx: state 1 counter: %x", $time, counter);
@@ -198,8 +199,8 @@ module uart_rx(
                 counter <= (counter + 1) % 16;
                 if (counter == 8) begin
                     tmp_data[bitpos] = RxD;
-                    $display("%d, uart rx: bit: %d, data: %b, bitpos: %d", $time, RxD, tmp_data, bitpos);
-                    bitpos <= bitpos + 1;
+                    // $display("%d, uart rx: bit: %d, data: %b, bitpos: %d", $time, RxD, tmp_data, bitpos);
+                    bitpos <= (bitpos + 1);
                 end
     //            $display("uart rx: counter: %x, bit pos: %x", counter, bitpos);
                 if (bitpos == 8 && counter == 15) begin
@@ -208,12 +209,13 @@ module uart_rx(
             end
             RX_STATE_STOP: begin
                 if (counter == 15 || (!RxD && counter >= 8)) begin
-                    Data <= tmp_data;
+                    RData <= tmp_data;
                     counter <= 0;
                     state <= RX_STATE_START;
                     ready <= 1;
+                    $display("%d, uart rx: Data out: %x", $time, RData);
                 end
-                else counter <= counter + 1;
+                else counter <= (counter + 1) % 16;
             end
             default: state <= RX_STATE_START;
             endcase
@@ -237,7 +239,7 @@ module uart_tx(
 
     reg [1:0] state = STATE_IDLE;
     reg [7:0] tmp_data;
-    integer bitpos = 0;
+    reg [4:0] bitpos = 0;
 
     assign busy = (state != STATE_IDLE);
     always @(posedge clk) begin
@@ -263,13 +265,14 @@ module uart_tx(
                 else
                     bitpos <= bitpos + 1;
                 TxD = tmp_data[bitpos];
-                $display("%d, uart tx: bit: %d, data %b, bitpos: %d", $time, TxD, tmp_data, bitpos);
+                // $display("%d, uart tx: bit: %d, data %b, bitpos: %d", $time, TxD, tmp_data, bitpos);
             end
         end
         STATE_STOP: begin
             if (en) begin
                 TxD <= 1;
                 state <= STATE_IDLE;
+                $display("%d, uart tx: Data In: %x", $time, tmp_data);
             end
         end
         default: begin
