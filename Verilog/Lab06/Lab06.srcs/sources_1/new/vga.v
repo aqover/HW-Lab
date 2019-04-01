@@ -118,7 +118,7 @@ module vga_test
 	(
 		input wire clk,
 		input wire [11:0] sw,
-		input wire push,
+		input wire [1:0] push,
 		output wire hsync, vsync,
 		output wire [11:0] rgb
 	);
@@ -129,32 +129,36 @@ module vga_test
 	// register for Basys 2 8-bit RGB DAC 
 	reg [11:0] rgb_reg;
 	reg reset = 0;
-	wire x, y;
+	wire [9:0] x, y;
 
 	// video status output from vga_sync to tell when to route out rgb signal to DAC
 	wire video_on;
-
+    wire p_tick;
 	// instantiate vga_sync
-	vga_sync vga_sync_unit (.clk(clk), .reset(reset), .hsync(hsync), .vsync(vsync), .video_on(video_on), .p_tick(), .x(x), .y(y));
-	   
+	vga_sync vga_sync_unit (.clk(clk), .reset(reset), .hsync(hsync), .vsync(vsync), .video_on(video_on), .p_tick(p_tick), .x(x), .y(y));
+	
 	reg state = 0;
+	reg [11:0] top_color = 0;
 	always @(posedge clk) begin
-		if (push) state = !state;
-	end
+	   if (push[0])
+		  state = !state;
+	   if (push[1])
+	       top_color <= sw;
+	end 
 
-	always @(x, y) begin
+	always @(posedge p_tick) begin
 		if (!state) begin
-			rgb_reg[3:0] = x * sw[3:0] / WIDTH;
-			rgb_reg[7:4] = x * sw[7:4] / WIDTH;
-			rgb_reg[11:8] = x * sw[11:8] / WIDTH;
+			rgb_reg[3:0] <= (((WIDTH - x) * sw[3:0]) + (x * top_color[3:0])) / WIDTH;
+			rgb_reg[7:4] <= (((WIDTH - x) * sw[7:4]) + (x * top_color[7:4])) / WIDTH;
+			rgb_reg[11:8] <= (((WIDTH - x) * sw[11:8]) + (x * top_color[11:8])) / WIDTH;
 		end
 		else begin
-			rgb_reg[3:0] = y * sw[3:0] / HEIGHT;
-			rgb_reg[7:4] = y * sw[7:4] / HEIGHT;
-			rgb_reg[11:8] = y * sw[11:8] / HEIGHT;
+			rgb_reg[3:0] <= (((HEIGHT - y) * sw[3:0]) + (y * top_color[3:0])) / HEIGHT;
+			rgb_reg[7:4] <= (((HEIGHT - y) * sw[7:4]) + (y * top_color[7:4])) / HEIGHT;
+			rgb_reg[11:8] <= (((HEIGHT - y) * sw[11:8]) + (y * top_color[11:8])) / HEIGHT;
 		end
 	end
 	        
-	// output
+//	output
 	assign rgb = (video_on) ? rgb_reg : 12'b0;
 endmodule

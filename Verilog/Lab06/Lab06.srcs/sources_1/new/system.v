@@ -25,13 +25,13 @@ module system(
     output wire [3:0]vgaRed, vgaGreen, vgaBlue,
     output wire Hsync, Vsync,
     input wire [11:0]sw,
-    input btnC, clk
+    input btnC, btnU, btnL, clk
     );
-
+    
 vga_test vga(
     .clk(clk), 
     .sw(sw),
-    .push(btnC),
+    .push({btnL, btnU}),
     .hsync(Hsync),
     .vsync(Vsync),
     .rgb({vgaRed, vgaGreen, vgaBlue})

@@ -26,7 +26,7 @@ reg enable = 0;
 
 wire tx_busy;
 wire rdy;
-wire [7:0] rxdata = 0;
+wire [7:0] rxdata;
 
 wire loopback;
 reg rdy_clr = 0;
@@ -58,6 +58,7 @@ always #1 clk = ~clk;
 always @(posedge rdy) begin
 	#2 rdy_clr <= 1;
 	#2 rdy_clr <= 0;
+	$display ("test: rx data: %x, tx data: %x", rxdata, data);
 	if (rxdata != data) begin
 		$display("FAIL: rx data %x does not match tx %x", rxdata, data);
 		$finish;

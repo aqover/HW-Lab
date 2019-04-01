@@ -56,11 +56,12 @@ module top_uart(
         case (rstate)
         STATE_RX_IDLE: begin
             RClear <= 0;
+            fifo[q] <= 8'b0;
             if (RFlag)
                 rstate <= STATE_RX_PUSH;
         end
         STATE_RX_PUSH: begin
-            fifo[q] = RData;
+            fifo[q] <= RData;
             q <= (q + 1) % QUEUE_SIZE;
             RClear <= 1;
             rstate <= STATE_RX_WAIT;
@@ -79,7 +80,7 @@ module top_uart(
             end
         end
         STATE_TX_POP: begin
-            TData = fifo[p];
+            TData <= fifo[p];
             p <= (p + 1) % QUEUE_SIZE;
             tstate <= STATE_TX_ADD;
         end
@@ -117,10 +118,11 @@ module uart(
 
     wire rx_en, tx_en;
     assign led = {TxBusy, RxFlag};
+//    initial $monitor("uart: Tx: %x, Rx: %x", TxData, RxData);
     baud_rate_gen uart_buadrate(.rxclk_en(rx_en), .txclk_en(tx_en), .clk(clk));    
     uart_rx receive(.RData(RxData), .ready(RxFlag), .clear(RxClear), .en(rx_en), .clk(clk), .RxD(RxD));
     uart_tx transmit(.TxD(TxD), .busy(TxBusy), .Data(TxData), .wr_en(TxWrite), .en(tx_en), .clk(clk));
-    initial $monitor("uart: Tx: %x, Rx: %x", TxData, RxData);
+    
 endmodule
 
 module baud_rate_gen(
@@ -172,7 +174,7 @@ module uart_rx(
     reg [7:0] tmp_data;
     integer counter;
     reg [4:0] bitpos;
-    reg [7:0] RData = 0;
+    reg [7:0] RData;
 
     initial begin
         ready = 0;
@@ -198,8 +200,8 @@ module uart_rx(
             RX_STATE_DATA: begin
                 counter <= (counter + 1) % 16;
                 if (counter == 8) begin
-                    tmp_data[bitpos] = RxD;
-                    // $display("%d, uart rx: bit: %d, data: %b, bitpos: %d", $time, RxD, tmp_data, bitpos);
+                    tmp_data <= tmp_data | (RxD << bitpos);
+                     $display("%d, uart rx: bit: %d, data: %b, bitpos: %d", $time, RxD, tmp_data, bitpos);
                     bitpos <= (bitpos + 1);
                 end
     //            $display("uart rx: counter: %x, bit pos: %x", counter, bitpos);
