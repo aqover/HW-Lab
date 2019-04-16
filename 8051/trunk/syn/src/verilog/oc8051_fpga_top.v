@@ -61,7 +61,7 @@ module oc8051_fpga_top (clk, rst,
 //
 // 2x7 led display output (port 0)
 //
-   dispout, 
+   // dispout, 
 //
 // ports
 //
@@ -87,7 +87,7 @@ input clk, rst, int1, int2, ea, iack_i, ack_i, rxd, t0, t1;
 input [7:0] dat_i;
 input [31:0] idat_i;
 output txd, istb_o, icyc_o, stb_o, cyc_o, we_o;
-output [13:0] dispout;
+// output [13:0] dispout;
 output [7:0] p0_out, p1_out, p2_out, p3_out, dat_o;
 output [15:0] adr_o, iadr_o;
 
@@ -130,9 +130,6 @@ oc8051_top oc8051_top_1(.wb_rst_i(nrst), .wb_clk_i(clk),
      .t0_i(t0), .t1_i(t1));
 
 
-
-
-
 oc8051_icache oc8051_icache1(.rst(rst), .clk(clk),
 // oc8051
         .adr_i(cadr_o), .dat_o(cdat_i), .stb_i(cstb_o), .ack_o(cack_i),
@@ -149,6 +146,6 @@ defparam oc8051_icache1.CACHE_RAM = 64; // cache ram x 32 (2^ADR_WIDTH)
 
 
 
-  disp disp1(.in(p0_out), .out(dispout));
+  // disp disp1(.in(p0_out), .out(dispout));
 
 endmodule
